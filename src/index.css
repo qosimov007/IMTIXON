@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+img {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#trending_card {
+    display: grid;
+    grid-template-areas: box;
+}
+
+#card {
+    display: grid;
+    grid-template-areas: box;
+}
+
+#trending_card picture {
+    grid-area: box;
+}
+
+#card picture {
+    grid-area: box;
+}
+
+#trending_card_bookmark {
+    grid-area: box;
+    justify-self: end;
+}
+
+#card_bookmark {
+    grid-area: box;
+    justify-self: end;
+}
+
+#card_trending_text {
+    grid-area: box;
+    align-self: end;
+}
+
+.react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.react-horizontal-scrolling-menu--scroll-container {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    display: flex;
+    gap: 8px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .react-horizontal-scrolling-menu--scroll-container {
+        width: 743px;
+        gap: 20px;
+        flex-wrap: nowrap;
+    }
+}
+
+@media (min-width: 1440px) {
+    .react-horizontal-scrolling-menu--scroll-container {
+        width: 1280px;
+        gap: 20px;
+        flex-wrap: nowrap;
+    }
+}
